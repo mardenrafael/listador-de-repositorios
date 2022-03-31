@@ -1,16 +1,23 @@
-import './App.css';
-import styledComponents from 'styled-components';
+// import './App.css';
+import { Component } from 'react';
+import AppStyle from './components/style/AppStyle';
+import AppHeader from './components/style/AppHeader';
+import GlobalStyle from './components/style/GlobalStyles';
 
 
 
+class App extends Component{
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <>
+        <GlobalStyle />
+        <AppStyle>
+          <AppHeader>Ola</AppHeader>
+        </AppStyle>
+      </>
+    );
+  }
 }
 
 export default App;
