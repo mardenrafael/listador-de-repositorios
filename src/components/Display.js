@@ -55,9 +55,30 @@ const RepoInput = styled.input`
     }
 `;
 
-const SearchIconImg = styled.img`
+const SearchButton = styled.button`
     height: 90%;
     width: 70px;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #f7f2ff;
+
+   border: none;
+
+   cursor: pointer;
+
+    :active {
+        border-style: none;
+    }
+    :focus-visible {
+        outline: none;
+    }
+`;
+
+const SearchIconImg = styled.img`
+    height: 100%;
+    width: 100%;
 `;
 
 const DisplayList = styled.div`
@@ -83,11 +104,15 @@ const List = styled.ul`
 
 class Display extends Component {
 
+
+
     render() {
         return(
             <DisplayBody>
                 <InputDiv>
-                    <SearchIconImg alt='Pesquisar' src={SearchIcon}></SearchIconImg>
+                    <SearchButton type='submit'>
+                      <SearchIconImg alt='Pesquisar' src={SearchIcon}></SearchIconImg>
+                    </SearchButton>
                     <RepoInput placeholder='username/user-repo'></RepoInput>
                 </InputDiv>
                 
