@@ -104,16 +104,36 @@ const List = styled.ul`
 
 class Display extends Component {
 
+    constructor(props) {
+        super(props)
 
+
+
+        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+
+        this.state = {
+            inputValue: ""
+        }
+    }
+
+
+    handleClick() {
+        console.log(this.state.inputValue)
+    }
+
+    handleChange(event) {
+        this.setState({ inputValue: event.target.value })
+    }
 
     render() {
         return(
             <DisplayBody>
                 <InputDiv>
-                    <SearchButton type='submit'>
+                    <SearchButton type='submit' onClick={this.handleClick}>
                       <SearchIconImg alt='Pesquisar' src={SearchIcon}></SearchIconImg>
                     </SearchButton>
-                    <RepoInput placeholder='username/user-repo'></RepoInput>
+                    <RepoInput placeholder='username/user-repo' onChange={this.handleChange}></RepoInput>
                 </InputDiv>
                 
                 <DisplayList>
