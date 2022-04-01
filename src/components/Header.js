@@ -4,7 +4,7 @@ import { Component } from 'react';
 
 const Div = styled.div`
     width: 100%;
-    height: 150px;
+    height: 100px;
 
     background-color: #026919;
 
