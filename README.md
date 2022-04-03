@@ -26,7 +26,8 @@
 ## como usar:
 
 Insira o nome do usuário a ser pesquisado. <br> 
-(Organizaçoes ainda nao são possiveis de encontrar atraves da pesquiss, apenas usuarios)
+(Organizaçoes ainda nao são possiveis de encontrar atraves da pesquiss, apenas usuarios) <br>
+(Não sou o melhor desinger do mundo, porem dei o meu melhor para criar esta UI, sei que pode ficar muito mais bonito)
 
 ![image](https://user-images.githubusercontent.com/69557606/161406475-8ab7dff9-5182-4dd5-a4d6-e5c484550dfe.png)
 
