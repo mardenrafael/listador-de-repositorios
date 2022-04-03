@@ -1,5 +1,28 @@
 # Projeto: Listador de repositorios
 
+### Sumário:
+<ul>
+    <li>
+        <a href="#como-usar">como usar</a>
+    </li>
+    <li>
+        <a href="#tecnologias-usadas"> Tecnologias usadas</a>
+    </li>
+    <li>
+        <a href="#design"> Design </a>
+    </li>
+    <li>
+        <a href="#meu-progresso"> Meu progresso </a>
+    </li>
+    <li>
+        <a href="#acabou"> Acabou? </a>
+    </li>
+    <li>
+        <a href="#veja-a-lista-de-issues-que-contem-os-proximos-passos-a-serem-feitos"> Veja os proximos passos</a>
+    </li>
+</ul>
+
+
 ## como usar:
 
 Insira o nome do usuário a ser pesquisado. <br> 
@@ -32,9 +55,9 @@ Foi uma boa experiencia, iniciei o projeto com `Create-react-app` tive meu prime
 
 ## Acabou?
 
-Com toda certeza, **não**, ainda tem muuuita coisa que eu quero modificar, atualizar e adicionar neste projeto, porém uma primeira versão esta completa. 😊
+Com toda certeza, **não**, ainda tem muuuita coisa que eu quero modificar, atualizar e adicionar neste projeto (Veja abaixo), porém uma primeira versão esta completa. 😊
 
-### Veja a lista de issues que contem os proximos passos a serem feitos:
+## Veja a lista de issues que contem os proximos passos a serem feitos:
 <ul>
     <li>
         <strong> https://github.com/mardenrafael/listador-de-repositorios/issues/1 </strong>
