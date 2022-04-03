@@ -28,7 +28,7 @@ O resultado é uma lista que contem todos os repositorios publicos do usuario pe
 
 ## Meu progresso:
 
-Foi uma boa experiencia, tive meu primeiro contado com Styled-components neste projeto, onde eu mesu primeiros componentes estilizados, e o fato de o styled-components aplicar CSS-in-JS facilita <strong >muuuuuuuito </strong> a organização do projeto com um todo, e a propria ideia do React de criar componentes personalizado é um tanto quando incrivel, sou iniciante no React ainda, então eu tenho muito a aprender.
+Foi uma boa experiencia, iniciei o projeto com `Create-react-app` tive meu primeiro contado com `styled-components` neste projeto, onde eu mesu primeiros componentes estilizados, e o fato de o `styled-components` aplicar CSS-in-JS facilita <strong >muuuuuuuito </strong> a organização do projeto com um todo, e a propria ideia do `React` de criar componentes personalizado é um tanto quando incrivel, sou iniciante no React ainda, então eu tenho muito a aprender.
 
 
 ## Acabou?
