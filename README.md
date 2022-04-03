@@ -30,7 +30,13 @@ O resultado é uma lista que contem todos os repositorios publicos do usuario pe
 
 Foi uma boa experiencia, iniciei o projeto com `Create-react-app` tive meu primeiro contado com `styled-components` neste projeto, onde eu mesu primeiros componentes estilizados, e o fato de o `styled-components` aplicar CSS-in-JS facilita <strong >muuuuuuuito </strong> a organização do projeto com um todo, e a propria ideia do `React` de criar componentes personalizado é um tanto quando incrivel, sou iniciante no React ainda, então eu tenho muito a aprender.
 
-
 ## Acabou?
 
 Com toda certeza, **não**, ainda tem muuuita coisa que eu quero modificar, atualizar e adicionar neste projeto, porém uma primeira versão esta completa. 😊
+
+### Veja a lista de issues que contem os proximos passos a serem feitos:
+<ul>
+    <li>
+        <strong> https://github.com/mardenrafael/listador-de-repositorios/issues/1 </strong>
+    </li>
+</ul>
