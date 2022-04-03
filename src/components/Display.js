@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import SearchIcon from '../img/Search-icon.svg';
-import { Component } from 'react';
+import { useState } from 'react';
+import {Octokit}  from '@octokit/core';
 
 
 const DisplayBody = styled.div`
@@ -102,50 +103,70 @@ const List = styled.ul`
     list-style: none;
 `;
 
-class Display extends Component {
+function Display() {
 
-    constructor(props) {
-        super(props)
+    const [inputValue, setInputValue] = useState("");
+    const [elements, setElements] = useState([]);
+    async function handleClick() {
+        await fetchDataApi(inputValue).then((response) => { 
+            fetchResponseHandle(response.data)
+         });
+    };
+
+    function fetchResponseHandle(data) {
+        let array = []
+        for(let i = 0; i < data.length; i++) {
+            array.push(data[i]);
+         };
+        setElements(array)
+    };
 
 
+    function handleChange(event) {
+        setInputValue(event.target.value)
+    };
 
-        this.handleClick = this.handleClick.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-
-        this.state = {
-            inputValue: ""
-        }
+    async function fetchDataApi(username) {
+        const octokit = new Octokit();
+        const resp = await octokit.request("GET /users/{username}/repos", {
+            username: username
+        })
+        return resp;
     }
 
-
-    handleClick() {
-        console.log(this.state.inputValue)
-    }
-
-    handleChange(event) {
-        this.setState({ inputValue: event.target.value })
-    }
-
-    render() {
-        return(
-            <DisplayBody>
-                <InputDiv>
-                    <SearchButton type='submit' onClick={this.handleClick}>
-                      <SearchIconImg alt='Pesquisar' src={SearchIcon}></SearchIconImg>
-                    </SearchButton>
-                    <RepoInput placeholder='username/user-repo' onChange={this.handleChange}></RepoInput>
-                </InputDiv>
-                
-                <DisplayList>
-                    <List>
-                        <li>
-                            <a href='#'>Link</a>
-                        </li>
-                    </List>
-                </DisplayList>
-            </DisplayBody>
-        );
-    }
+    return(
+        <DisplayBody>
+            <InputDiv>
+                <SearchButton type='submit' onClick={handleClick}>
+                    <SearchIconImg alt='Pesquisar' src={SearchIcon}></SearchIconImg>
+                </SearchButton>
+                <RepoInput placeholder='username' onChange={handleChange}></RepoInput>
+            </InputDiv>
+            
+            <DisplayList>
+                <List>
+                    {elements.map((item) => {
+                        
+                        if (item.fork){
+                            return <li key={item.id}>
+                                 <a href={item.html_url}>
+                                    {item.name}
+                                </a> (fork)
+                            </li>
+                        } else {
+                            return (
+                            <li key={item.id}>
+                                <a href={item.html_url}>
+                                    {item.name}
+                                </a>  
+                            </li>)
+                        }
+ 
+                    })}
+                </List>
+            </DisplayList>
+        </DisplayBody>
+    );
 }
 
 export default Display;
