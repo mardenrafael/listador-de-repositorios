@@ -64,3 +64,5 @@ Com toda certeza, **não**, ainda tem muuuita coisa que eu quero modificar, atua
         <strong> https://github.com/mardenrafael/listador-de-repositorios/issues/1 </strong>
     </li>
 </ul>
+
+<strong> Fique a vontade para contribuir </strong>
