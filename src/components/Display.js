@@ -107,10 +107,13 @@ function Display() {
 
     const [inputValue, setInputValue] = useState("");
     const [elements, setElements] = useState([]);
+
     async function handleClick() {
-        await fetchDataApi(inputValue).then((response) => { 
-            fetchResponseHandle(response.data)
-         });
+        if (inputValue !== ""){
+            await fetchDataApi(inputValue).then((response) => { 
+                fetchResponseHandle(response.data)
+            });
+        };
     };
 
     function fetchResponseHandle(data) {
@@ -128,10 +131,20 @@ function Display() {
 
     async function fetchDataApi(username) {
         const octokit = new Octokit();
-        const resp = await octokit.request("GET /users/{username}/repos", {
-            username: username
-        })
-        return resp;
+        try {
+            const resp = await octokit.request("GET /users/{username}/repos", {
+                username: username
+            }).catch((error) => {
+                return (<h2> {error} </h2>)
+
+            })
+            
+
+            return resp;
+        } catch (error){
+            // setError(error);
+        }
+
     }
 
     return(
