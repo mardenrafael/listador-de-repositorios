@@ -107,10 +107,13 @@ function Display() {
 
     const [inputValue, setInputValue] = useState("");
     const [elements, setElements] = useState([]);
+
     async function handleClick() {
-        await fetchDataApi(inputValue).then((response) => { 
-            fetchResponseHandle(response.data)
-         });
+        if (inputValue !== ""){
+            await fetchDataApi(inputValue).then((response) => { 
+                fetchResponseHandle(response.data)
+            });
+        };
     };
 
     function fetchResponseHandle(data) {
@@ -130,9 +133,9 @@ function Display() {
         const octokit = new Octokit();
         const resp = await octokit.request("GET /users/{username}/repos", {
             username: username
-        })
+        });
         return resp;
-    }
+    };
 
     return(
         <DisplayBody>
