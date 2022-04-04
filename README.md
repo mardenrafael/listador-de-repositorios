@@ -58,17 +58,8 @@ Foi uma boa experiencia, iniciei o projeto com `Create-react-app` tive meu prime
 
 Com toda certeza, **não**, ainda tem muuuita coisa que eu quero modificar, atualizar e adicionar neste projeto (Veja abaixo), porém uma primeira versão esta completa. 😊
 
-## Veja a lista de issues que contem os proximos passos a serem feitos:
-<ul>
-    <li>
-        <strong> https://github.com/mardenrafael/listador-de-repositorios/issues/1 </strong>
-    </li>
-    <li>
-        <strong> https://github.com/mardenrafael/listador-de-repositorios/issues/2 </strong>
-    </li>
-    <li>
-        <strong> https://github.com/mardenrafael/listador-de-repositorios/issues/3 </strong>
-    </li>
-</ul>
+## Veja a lista de issues que contem os proximos passos a serem feitos na aba issues:
+
+<strong> https://github.com/mardenrafael/listador-de-repositorios/issues </strong>
 
 <strong> Fique a vontade para contribuir </strong>
